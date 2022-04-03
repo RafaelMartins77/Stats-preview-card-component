@@ -30,10 +30,11 @@ body {
 
 main {
   background-color: var(--Darkdesaturatedblue);
-  width: 140vh;
-  height: 56vh;
+  width: 100%;
+  max-width: 876px;
+  height: 380px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 100%;
   border-radius: 8px;
 }
@@ -56,13 +57,12 @@ main {
 }
 
 p#main {
-  padding-right: 4em;
   color: var(--Slightlytransparentwhite);
   font-family: "Inter", cursive;
   font-weight: 400;
   font-size: 0.9em;
   line-height: 1.7em;
-  margin-bottom: 5em;
+  margin-bottom: 4.8em;
 }
 
 .subtitle {
@@ -70,7 +70,9 @@ p#main {
   margin-right: 3em;
 }
 
-.subtitle h4{
+.subtitle em{
+  font-style: normal;
+  display: block;
   color: var(--White);
   font-family: "Inter", Fantasy;
   font-weight: 700;
@@ -91,7 +93,7 @@ p#main {
   background-image: url("images/image-header-desktop.jpg");
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  background-size: 100%;
+  background-size: 100% 100%;
   border-radius: 0 8px 8px 0;
 }
 
@@ -106,13 +108,17 @@ p#main {
 
 /*Responsividade*/
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 340px) and (max-width: 873px) {
+  body {
+    height: 120vh;
+  }
+
   main {
-    width: 50vh;
-    height: 125vh;
+    width: 300px;
+    height: 650px;
     margin: 20px auto;
     grid-template-columns: 100%;
-    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-template-rows: 230px 1fr;
   }
 
   .image {
@@ -134,13 +140,12 @@ p#main {
   p#main {
     font-size: 0.8rem;
     text-align: center;
-    width: 20em;
     padding: 0;
     margin-bottom: 1.7em;
   }
 
   .subtitle {
-    font-size: 0.7rem;
+    font-size: 1rem;
     display: block;
     text-align: center;
     margin-right: 0;
